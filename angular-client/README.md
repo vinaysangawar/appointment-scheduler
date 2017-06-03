@@ -13,7 +13,7 @@ To start the application locally:
 - `bower install` to install all required frontend dependencies
 - `npm install -g gulp` if you do not have gulp already (may need sudo)
 - `npm install -g http-server` a simple http server (may need sudo)
-- `gulp` build the project to dist/ folder
+- `gulp` builds the project to dist/ folder
 - `http-server dist` to run the project from dist/
 
 Open http://127.0.0.1:8080 in a web browser.
