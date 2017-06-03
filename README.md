@@ -1,5 +1,5 @@
 # Appointment Scheduler
->  An application to schedule an appointment complete with a Node backend server and Angular frontend.
+An application to schedule an appointment complete with a Node backend server and Angular frontend.
 
 # Prerequisites
 
