@@ -25,3 +25,4 @@ Open http://127.0.0.1:8080 in a web browser.
 - `app/scripts/app.js` - The entry point of the application. This file defines the angular application and sets angular routes for the SPA
 - `app/scripts/controllers.js` - This file contains the angular controller.
 - `app/scripts/services.js` - This file contains the angular factories that return an angular $resource that allows for http requests to the server.
+- `app/views/` - This folder contains the html views for the application.
