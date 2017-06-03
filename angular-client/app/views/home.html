@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row row-content">
+        <div class="col-xs-12 center-block">
+            <h3 align=center>Please Schedule an Appointment</h3>
+        </div>
+    </div>
+
+    <div class="row row-content">
+        <div class="col-xs-12 col-xs-offset-5 center-block" align=center>
+            <div class="btn-group btn-group-vertical" role="group" aria-label="...">
+                <button type="button" class="btn"
+                  ng-repeat="(timeslot, appt) in schedule"
+                  ng-class="{true: 'btn-danger', false: 'btn-default'}[schedule[timeslot].isTimeslotTaken]"
+                  ng-click="openAppointmentModal(timeslot)">{{timeslot}}</button>
+            </div>
+        </div>
+    </div>
+</div>

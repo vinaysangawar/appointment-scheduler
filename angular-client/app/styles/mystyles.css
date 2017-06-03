@@ -1,0 +1,17 @@
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  /*min-height: 400px;*/
+}
+.row-footer {
+  margin: 0px auto;
+  padding: 20px 0px;
+  background-color: #AfAfAf;
+}
+
+.center-block {float: none !important}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}
