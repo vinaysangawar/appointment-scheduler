@@ -33,7 +33,7 @@ The server will run on localhost:3000
 
 `Operation`: PUT <br>
 `Endpoint`: host:port/schedule/timeslot <br>
-`Body`: { "name": "Vinay", "phoneNumber": 7701234567}
+`Body`: { "name": "Vinay", "phoneNumber": 7701234567} <br>
 `Response`: Appointment Details
 
 `Operation`: DELETE <br>
