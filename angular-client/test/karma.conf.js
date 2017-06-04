@@ -18,6 +18,7 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/ng-dialog/js/ngDialog.js',
       'app/scripts/*.js',
       'test/**/*.js'
     ],
@@ -61,6 +62,12 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome','PhantomJS', 'PhantomJS_custom'],
 
+    // Which plugins to enable
+    plugins: [
+      'karma-chrome-launcher',
+      'karma-jasmine',
+      'karma-phantomjs-launcher'
+    ],
     // you can define custom flags
     customLaunchers: {
       'PhantomJS_custom': {

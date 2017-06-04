@@ -52,3 +52,24 @@ exports.clearTimeslot = function clearTimeslot(timeslot) {
     } else reject(`Invalid timeslot: ${timeslot}`);
   });
 };
+
+// Used for testing
+exports.resetSchedule = function resetSchedule() {
+  return new Promise((resolve, reject) => {
+    try {
+      schedule = {
+        '9:00am-10:00am': {},
+        '10:00am-11:00am': {},
+        '11:00am-12:00pm': {},
+        '12:00pm-1:00pm': {},
+        '1:00pm-2:00pm': {},
+        '2:00pm-3:00pm': {},
+        '3:00pm-4:00pm': {},
+        '4:00pm-5:00pm': {}
+      }
+      resolve(schedule);
+    } catch (err) {
+      reject(`Error in resetting schedule: ${err}`);
+    }
+  });
+};

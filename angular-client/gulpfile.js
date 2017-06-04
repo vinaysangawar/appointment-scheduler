@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'),
     browserSync = require('browser-sync'),
     ngannotate = require('gulp-ng-annotate'),
-    del = require('del');
+    del = require('del'),
+    Server = require('karma').Server;
 
 gulp.task('jshint', function() {
   return gulp.src('app/scripts/**/*.js')
@@ -57,7 +58,7 @@ gulp.task('watch', ['browser-sync'], function() {
 
   // Watch .js files
   gulp.watch('{app/scripts/**/*.js,app/styles/**/*.css,app/**/*.html}', ['usemin']);
-    
+
   // Watch image files
   gulp.watch('app/images/**/*', ['imagemin']);
 
@@ -77,11 +78,18 @@ gulp.task('browser-sync', ['default'], function () {
          baseDir: "dist",
          index: "index.html"
       }
-   });  
-    
+   });
+
   // Watch any files in dist/, reload on change
   gulp.watch(['dist/**']).on('change', browserSync.reload);
-    
+
+});
+
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/test/karma.conf.js',
+    singleRun: true
+  }, function() { done(); }).start();
 });
 
 // Default task
